@@ -53,11 +53,6 @@ class WeekPlan extends LitElement {
         this.title = "";
         this.description = "";
         this.content = {};
-        this.assiningValues();
-    }
-
-    assiningValues() {
-        console.log(this.weekContent);
     }
 
     render() {
@@ -73,6 +68,7 @@ class WeekPlan extends LitElement {
                     <div class="week-description">${this.description}</div>
                     <div class="week-breakdown">9 videos (Total 41 min), 2 readings, 3 quizzes<a class="see-all" href="#">See All</a></div>
                     <div class="week-content">
+                        <learning-content videos=${this.content.videos} readings=${this.content.readings} exercises=${this.content.exercises}></learning-content>
                     </div>
                 </div>
             </div>
