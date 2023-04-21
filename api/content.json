@@ -1,0 +1,66 @@
+{
+    "Weeks": [
+        {
+        "title": "Introduction to Server-Side JavaScript",
+        "description": "You may already be familiar with JavaScript, but did you know there is a server-side JavaScript framework? Discover how Node.js is used on the back end to develop rich, dynamic web applications by importing external modules and using node package manager (NPM). Get hands-on experience using Node.js to build your own simple web server.",
+        "videos": [
+            {
+                "Title": "Course Introduction: Welcome to Developing Back-End Apps with Node.js & Express",
+                "Duration": "3m"
+            },
+            {
+                "Title": "What is Back End Development?",
+                "Duration": "7m"
+            },
+            {
+                "Title": "Introduction to Node.js",
+                "Duration": "3m"
+            },
+            {
+                "Title": "Expert Viewpoints: Introductory Thoughts on Server-Side JavaScript and Node.js",
+                "Duration": "5m"
+            },
+            {
+                "Title": "Import and Require",
+                "Duration": "5m"
+            },
+            {
+                "Title": "Introduction to Server-Side JavaScript",
+                "Duration": "3m"
+            },
+            {
+                "Title": "Creating a Web Server with Node.js",
+                "Duration": "2m"
+            },
+            {
+                "Title": "Working with Node.js Modules",
+                "Duration": "4m"
+            },
+            {
+                "Title": "Overview of Node Package Manager",
+                "Duration": "5m"
+            }
+        ],
+        "readings": [
+            {
+                "Title": "Welcome",
+                "Duration": "2m"
+            },
+            {
+                "Title": "Module Summary",
+                "Duration": "2m"
+            }
+        ],
+        "exercises": [
+            {
+                "Title": "Practice Weeks",
+                "Duration": "16m"
+            },
+            {
+                "Title": "Graded Quiz",
+                "Duration": "20m"
+            }
+        ]
+        }
+    ]
+}
