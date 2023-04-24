@@ -34,6 +34,10 @@ class LearningContent extends LitElement {
         this.exercises = [];
     }
 
+    showContent() {
+        console.log(this.videos);
+    }
+
     render() {
         return html`
             <div class="content">
@@ -41,34 +45,34 @@ class LearningContent extends LitElement {
                     <div class="content-item">
                         <div class="content-title">
                             ${console.log(video)}
-                            ${video["Video"].Title}
+                            ${video.title}
                         </div>
                         <div class="duration">
-                            ${video["Duration"]}
+                            ${video.duration}
                         </div>
                     </div>
                 `)}
                 ${this.readings.map((reading) => html`
                     <div class="content-item">
                         <div class="content-title">
-                            ${reading["Title"]}
-                        </div>  
-                        <div class="duration">
-                            ${reading["Duration"]}
+                            ${reading.title}
                         </div>
+                        <div class="duration">
+                            ${reading.duration}
+                        </div>  
                     </div>
                 `)}
                 ${this.exercises.map((exercise) => html`
                     <div class="content-item">
                         <div class="content-title">
-                            ${exercise["Title"]}
+                            ${exercise.title}
                         </div>
                         <div class="duration">
-                            ${exercise["Duration"]}
+                            ${exercise.duration}
                         </div>
                     </div>
                 `)}
-            <\div>
+            </div>
         `;
     }
 }

@@ -4,7 +4,7 @@ class WeekPlan extends LitElement {
     static properties = {
         number: { type: Number },
         time: { type: Number },
-        title: { type: String },
+        weekTitle: { type: String },
         description: { type: String },
         videos: { type: Array },
         readings: { type: Array },
@@ -50,10 +50,35 @@ class WeekPlan extends LitElement {
         super();
         this.number = 0;
         this.time = 0;
-        this.title = "";
+        this.weekTitle = "";
         this.description = "";
-        this.content = {};
+        this.videos = [];
+        this.readings = [];
+        this.exercises = [];
+        this.showContent();
     }
+
+    showContent() {
+        console.log(this.videos);
+    }
+    // toggleEvent() {
+    //     const state = this.shadowRoot.querySelector('details').getAttribute('open') === "";
+    //     this.openDetails = state;
+    // }
+
+    // updated(changedProperties) { 
+    //     changedProperties.forEach((oldValue, propName) => {
+    //         if (propName === 'openDetails') {
+    //             this.dispatchEvent(new CustomEvent('opened-changed',
+    //             {
+    //                 composed: true, 
+    //                 bubbles: true,
+    //                 cancelable: false,
+    //                 detail: {
+    //                 value: this[propName]}}))
+    //             }
+    //     });
+    // }
 
     render() {
         return html`
@@ -64,7 +89,7 @@ class WeekPlan extends LitElement {
                 </div>
                 <div class="content">
                     <div class="time-total">${this.time} to complete</div>
-                    <div class="week-title">${this.title}</div>
+                    <div class="week-title">${this.weekTitle}</div>
                     <div class="week-description">${this.description}</div>
                     <div class="week-breakdown">9 videos (Total 41 min), 2 readings, 3 quizzes<a class="see-all" href="#">See All</a></div>
                     <div class="week-content">

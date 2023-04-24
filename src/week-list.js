@@ -1,5 +1,6 @@
 import { LitElement, html, css } from 'lit';
 import './week-plan.js';
+import './learning-content.js';
 
 class WeekList extends LitElement {
     static properties = {
@@ -42,6 +43,7 @@ class WeekList extends LitElement {
         return this.number;
     }
     
+    
     render() {
         return html `
             <div class="weeks">
@@ -49,16 +51,22 @@ class WeekList extends LitElement {
                     html `
                     <div class="week">
                         <week-plan 
-                        title=${week.title}
-                        ${console.log(week.title)} 
-                        content=${week}
-                        ${console.log(week)}
+                        weekTitle=${week.title}
+                        .content=${week}
                         description=${week.description}
-                        videos=${week.videos}
-                        readings=${week.readings}
-                        exercises=${week.exercises}
+                        .videos=${week.videos}
+                        ${console.log(week.videos)}
+                        .readings=${week.readings}
+                        .exercises=${week.exercises}
                         number=${this.weekNumber()}
-                        ></week-plan>
+                        >
+                            <learning-content
+                            .videos=${week.videos}
+                            .readings=${week.readings}
+                            .exercises=${week.exercises}
+                            >
+                            </learning-content>
+                        </week-plan>
                     </div>
                 `)}
             </div>
