@@ -1,64 +1,64 @@
 {
-    "Weeks": [
+    "weeks": [
         {
         "title": "Introduction to Server-Side JavaScript",
         "description": "You may already be familiar with JavaScript, but did you know there is a server-side JavaScript framework? Discover how Node.js is used on the back end to develop rich, dynamic web applications by importing external modules and using node package manager (NPM). Get hands-on experience using Node.js to build your own simple web server.",
         "videos": [
             {
                 "Title": "Course Introduction: Welcome to Developing Back-End Apps with Node.js & Express",
-                "Duration": "3m"
+                "Duration": 3
             },
             {
                 "Title": "What is Back End Development?",
-                "Duration": "7m"
+                "Duration": 7
             },
             {
                 "Title": "Introduction to Node.js",
-                "Duration": "3m"
+                "Duration": 3
             },
             {
                 "Title": "Expert Viewpoints: Introductory Thoughts on Server-Side JavaScript and Node.js",
-                "Duration": "5m"
+                "Duration": 5
             },
             {
                 "Title": "Import and Require",
-                "Duration": "5m"
+                "Duration": 5
             },
             {
                 "Title": "Introduction to Server-Side JavaScript",
-                "Duration": "3m"
+                "Duration": 5
             },
             {
                 "Title": "Creating a Web Server with Node.js",
-                "Duration": "2m"
+                "Duration": 2
             },
             {
                 "Title": "Working with Node.js Modules",
-                "Duration": "4m"
+                "Duration": 4
             },
             {
                 "Title": "Overview of Node Package Manager",
-                "Duration": "5m"
+                "Duration": 5
             }
         ],
         "readings": [
             {
                 "Title": "Welcome",
-                "Duration": "2m"
+                "Duration": 2
             },
             {
                 "Title": "Module Summary",
-                "Duration": "2m"
+                "Duration": 2
             }
         ],
         "exercises": [
             {
                 "Title": "Practice Weeks",
-                "Duration": "16m"
+                "Duration": 16
             },
             {
                 "Title": "Graded Quiz",
-                "Duration": "20m"
+                "Duration": 20
             }
         ]
         }

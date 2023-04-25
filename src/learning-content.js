@@ -5,6 +5,11 @@ class LearningContent extends LitElement {
             videos: { type: Array },
             readings: { type: Array },
             exercises: { type: Array },
+            totalVideos: { type: Number },
+            totalReadings: { type: Number },
+            totalExercises: { type: Number },
+            videoTime: {type: Number},
+            totalTime: {type: Number}
         }
 
     static styles = css`
@@ -12,9 +17,11 @@ class LearningContent extends LitElement {
             color: blue,
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
-        .duration {
-            display: inline;
-            padding: 8px;
+        .content {
+            display: flex;
+            flex-direction: column;
+            border-top: 1px solid black;
+            justify-content: space-between;
         }
         .videos, .readings, .exercises {
             display: flex;
@@ -25,6 +32,12 @@ class LearningContent extends LitElement {
             display: flex;
             flex-direction: row;
         }
+        .content-divider {
+            border-bottom: 1px solid black;
+        }
+        .content-title {
+            flex: 1;
+        }
     `;
 
     constructor() {
@@ -34,44 +47,39 @@ class LearningContent extends LitElement {
         this.exercises = [];
     }
 
-    showContent() {
-        console.log(this.videos);
+    totalContent() {
+        this.totalVideos = this.videos.length;
+        this.totalReadings = this.readings.length;
+        this.totalExercises = this.exercises.length;
     }
 
     render() {
         return html`
             <div class="content">
+                <div class="videos content-divider">
                 ${this.videos.map((video) => html`
                     <div class="content-item">
-                        <div class="content-title">
-                            ${console.log(video)}
-                            ${video.title}
-                        </div>
-                        <div class="duration">
-                            ${video.duration}
-                        </div>
+                        <div class="content-title">${video.Title}</div>
+                        <div class="duration">${video.Duration} minutes</div>
                     </div>
                 `)}
+                </div>
+                <div class="readings content-divider">
                 ${this.readings.map((reading) => html`
                     <div class="content-item">
-                        <div class="content-title">
-                            ${reading.title}
-                        </div>
-                        <div class="duration">
-                            ${reading.duration}
-                        </div>  
+                        <div class="content-title">${reading.Title}</div>
+                        <div class="duration">${reading.Duration} minutes</div>  
                     </div>
                 `)}
+                </div>
+                <div class="exercises content-divider">
                 ${this.exercises.map((exercise) => html`
                     <div class="content-item">
-                        <div class="content-title">
-                            ${exercise.title}
-                        </div>
-                        <div class="duration">
-                            ${exercise.duration}
-                        </div>
+                        <div class="content-title">${exercise.Title}</div>
+                        <div class="duration">${exercise.Duration} minutes</div>
                     </div>
                 `)}
+                </div>
             </div>
         `;
     }

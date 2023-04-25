@@ -9,7 +9,12 @@ class WeekPlan extends LitElement {
         videos: { type: Array },
         readings: { type: Array },
         exercises: { type: Array },
-        content: { type: Object },    
+        content: { type: Object }, 
+        totalVideos: { type: Number },
+        totalReadings: { type: Number },
+        totalExercises: { type: Number },
+        videoTime: {type: Number},
+        totalTime: {type: Number}   
     };
 
     static styles = css`
@@ -55,12 +60,26 @@ class WeekPlan extends LitElement {
         this.videos = [];
         this.readings = [];
         this.exercises = [];
-        this.showContent();
+        this.videoTime = 0;
+        this.totalTime = 0;
     }
 
-    showContent() {
-        console.log(this.videos);
+    totalContent() {
+        this.videos.map((video) => {
+            this.videoTime += video.Duration;
+            console.log(this.videoTime)
+            return this.videoTime;
+        })
+        this.readings.map((reading) => {
+            this.totalTime += reading.Duration;
+        })
+        this.exercises.map((exercise) => {
+            this.totalTime += exercise.Duration;
+        })
+        this.totalTime += this.videoTime;
+        console.log(this.totalTime);
     }
+
     // toggleEvent() {
     //     const state = this.shadowRoot.querySelector('details').getAttribute('open') === "";
     //     this.openDetails = state;
@@ -85,15 +104,17 @@ class WeekPlan extends LitElement {
             <div class="week">
                 <div class="week-info">
                     <div class="week-word">Week</div>
+                    ${this.totalContent()}
                     <div class="week-number">${this.number}</div>
                 </div>
                 <div class="content">
-                    <div class="time-total">${this.time} to complete</div>
+                    <div class="time-total">${this.totalTime} minutes to complete</div>
                     <div class="week-title">${this.weekTitle}</div>
                     <div class="week-description">${this.description}</div>
-                    <div class="week-breakdown">9 videos (Total 41 min), 2 readings, 3 quizzes<a class="see-all" href="#">See All</a></div>
+                    ${console.log(this.content.videos.length)}
+                    <div class="week-breakdown">${this.content.videos.length} videos (Total ${this.videoTime} min), ${this.content.readings.length} readings, ${this.content.exercises.length} quizzes<a class="see-all" href="#">See All</a></div>
                     <div class="week-content">
-                        <learning-content videos=${this.content.videos} readings=${this.content.readings} exercises=${this.content.exercises}></learning-content>
+                        <learning-content .videos=${this.content.videos} .readings=${this.content.readings} .exercises=${this.content.exercises}></learning-content>
                     </div>
                 </div>
             </div>

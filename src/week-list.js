@@ -34,7 +34,7 @@ class WeekList extends LitElement {
             }
             return [];
         }).then((data) => {
-            this.weekArray = data.Weeks;
+            this.weekArray = data.weeks;
         });
     }  
 
@@ -55,17 +55,10 @@ class WeekList extends LitElement {
                         .content=${week}
                         description=${week.description}
                         .videos=${week.videos}
-                        ${console.log(week.videos)}
                         .readings=${week.readings}
                         .exercises=${week.exercises}
                         number=${this.weekNumber()}
                         >
-                            <learning-content
-                            .videos=${week.videos}
-                            .readings=${week.readings}
-                            .exercises=${week.exercises}
-                            >
-                            </learning-content>
                         </week-plan>
                     </div>
                 `)}
