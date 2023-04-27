@@ -17,6 +17,8 @@
     "start": "web-dev-server"
   },
   "dependencies": {
+    "@lrnwebcomponents/intersection-element": "^4.0.4",
+    "@lrnwebcomponents/simple-icon": "^4.2.0",
     "lit": "^2.0.2"
   },
   "devDependencies": {

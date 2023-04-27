@@ -1,8 +1,9 @@
 import { LitElement, html, css } from 'lit';
+import { IntersectionObserverMixin } from "@lrnwebcomponents/intersection-element/lib/IntersectionObserverMixin.js";
 import './week-plan.js';
 import './learning-content.js';
 
-class WeekList extends LitElement {
+class WeekList extends IntersectionObserverMixin(LitElement) {
     static properties = {
             weekArray: { type: Array },
             number: { type: Number },
@@ -46,6 +47,8 @@ class WeekList extends LitElement {
     
     render() {
         return html `
+        ${this.elementVisible ? 
+            html`
             <div class="weeks">
                 ${this.weekArray.map((week) => 
                     html `
@@ -63,6 +66,7 @@ class WeekList extends LitElement {
                     </div>
                 `)}
             </div>
+            ` : ``};
         `;
     }
 }

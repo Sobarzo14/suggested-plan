@@ -61,6 +61,118 @@
                 "Duration": 20
             }
         ]
+        },
+        {
+            "title": "Asynchronous I/O with callback programming",
+            "description": "How can you optimize processor time with Node.js? Discover how Node.js operates in a non-blocking manner and how to handle the result from a network call. Explore the advantages and challenges associated with using anonymous callback functions. Use Node.js to parse JavaScript Object Notation (JSON) data from a Hypertext Transfer Protocol (HTTP) message.",
+            "videos": [
+                {
+                    "Title": "Asynchronous I/O with Callback Programming",
+                    "Duration": 6
+                },
+                {
+                    "Title": "Creating Callback Functions",
+                    "Duration": 6
+                },
+                {
+                    "Title": "Expert Viewpoints: Using Anonymous Callback Functions in Node.js",
+                    "Duration": 5
+                },
+                {
+                    "Title": "Issues with Callbacks",
+                    "Duration": 5
+                },
+                {
+                    "Title": "Promises",
+                    "Duration": 3
+                },
+                {
+                    "Title": "Working with JSON",
+                    "Duration": 1
+                },
+                {
+                    "Title": "Expert Viewpoints: Using JSON & JavaScript",
+                    "Duration": 3
+                }
+            ],
+            "readings": [
+                {
+                    "Title": "Module Summary",
+                    "Duration": 1
+                }
+            ],
+            "exercises": [
+                {
+                    "Title": "Practice Quiz",
+                    "Duration": 2
+                }
+            ]
+        },
+        {
+            "title": "Express Web Application Framework",
+            "description": "When you use Node.js to build a hypertext transfer protocol (HTTP) server, you will discover that the default Node.js framework is low-level. You can extend its features with third-party packages such as Express. Get hands-on experience with the Express web application framework by creating a web server that listens to incoming requests. You also learn how to implement authorization with Express. Use routing, middleware, and template rendering to extend the Node.js framework and handle dynamic content.",
+            "videos": [
+                {
+                    "Title": "Extending Node.js",
+                    "Duration": 4
+                },
+                {
+                    "Title": "Expert Viewpoints: Working with Third-Party Node.js Extensions",
+                    "Duration": 2
+                },
+                {
+                    "Title": "Introduction to Web Frameworks",
+                    "Duration": 7
+                },
+                {
+                    "Title": "Express Web Application Framework",
+                    "Duration": 6
+                },
+                {
+                    "Title": "Your First Express Web Application",
+                    "Duration": 3
+                },
+                {
+                    "Title": "Expert Viewpoints: Working with Back-end JavaScript Frameworks and Express",
+                    "Duration": 3
+                },
+                {
+                    "Title": "Routing, Middleware, and Templating",
+                    "Duration": 7
+                },
+                {
+                    "Title": "Authentication in Node JS",
+                    "Duration": 7
+                },
+                {
+                    "Title": "Express Best Practices",
+                    "Duration": 7
+                }
+            ],
+            "readings": [
+                {
+                    "Title": "Introduction to Middleware & Routers",
+                    "Duration": 3
+                },
+                {
+                    "Title": "HTTP Methods and Rest APIs",
+                    "Duration": 5
+                },
+                {
+                    "Title": "Module Summary",
+                    "Duration": 1
+                }
+            ],
+            "exercises": [
+                {
+                    "Title": "Practice Quiz",
+                    "Duration": 18
+                },
+                {
+                    "Title": "Graded Quiz",
+                    "Duration": 20
+                }
+            ]
         }
     ]
 }
