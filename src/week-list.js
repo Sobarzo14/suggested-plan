@@ -3,11 +3,19 @@ import { IntersectionObserverMixin } from "@lrnwebcomponents/intersection-elemen
 import './week-plan.js';
 import './learning-content.js';
 
-class WeekList extends IntersectionObserverMixin(LitElement) {
-    static properties = {
-            weekArray: { type: Array },
-            number: { type: Number },
-    };
+export class WeekList extends IntersectionObserverMixin(LitElement) {
+    static get properties() {
+        let pogs = {};
+        if (super.properties) {
+          pogs = super.properties;
+        }
+        return {
+          ...pogs,
+        weekElementList: { type: Array },
+        weekArray: { type: Array },
+        number: { type: Number }
+        }   
+    }
 
     static styles = css`
         .weeks {

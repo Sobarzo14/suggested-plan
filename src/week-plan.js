@@ -91,6 +91,7 @@ class WeekPlan extends LitElement {
         this.videoTime = 0;
         this.totalTime = 0;
         this.elementVisible = false;
+        
     }
 
     totalContent() {
@@ -127,6 +128,9 @@ class WeekPlan extends LitElement {
                     detail: {
                     value: this[propName]}}))
                 }
+            if (propName == 'videos') {
+                this.totalContent();
+            }
         });
     }
 
@@ -135,7 +139,6 @@ class WeekPlan extends LitElement {
             <div class="week">
                 <div class="week-info">
                     <div class="week-word">Week</div>
-                    ${this.totalContent()}
                     <div class="week-number">${this.number}</div>
                 </div>
                 <div class="content">
