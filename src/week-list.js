@@ -62,6 +62,7 @@ export class WeekList extends IntersectionObserverMixin(LitElement) {
                     html `
                     <div class="week">
                         <week-plan 
+                        ${console.log(week)}
                         weekTitle=${week.title}
                         .content=${week}
                         description=${week.description}

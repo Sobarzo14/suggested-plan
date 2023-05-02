@@ -49,6 +49,11 @@ class WeekPlan extends LitElement {
         .see-all {
             display: inline;
             padding: 8px;
+            background: none;
+            border: none;
+            color: blue;
+            text-decoration: underline;
+            cursor: pointer;
         }
         .week {
             width: 100%;
@@ -97,9 +102,9 @@ class WeekPlan extends LitElement {
     totalContent() {
         this.videos.map((video) => {
             this.videoTime += video.Duration;
-            this.totalTime += this.videoTime;
             return this.videoTime;
         })
+        this.totalTime += this.videoTime;
         this.readings.map((reading) => {
             this.totalTime += reading.Duration;
         })
@@ -153,7 +158,7 @@ class WeekPlan extends LitElement {
                     <span class="icon-container content-icon">
                     <simple-icon icon="hardware:desktop-mac" style="--simple-icon-color:white" accent-color="grey" dir="ltr" contrast="0"></simple-icon>
                     </span>
-                    ${this.totalVideos} videos (Total ${this.videoTime} min), ${this.totalReadings} readings, ${this.totalExercises} quizzes<a class="see-all" open=false href="#" @click=${this.openChanged}>${this.display}</a></div>
+                    ${this.totalVideos} videos (Total ${this.videoTime} min), ${this.totalReadings} readings, ${this.totalExercises} quizzes<button class="see-all" open=false href="#" @click=${this.openChanged}>${this.display}</button></div>
                         <learning-content class="hidden" .videos=${this.content.videos} .readings=${this.content.readings} .exercises=${this.content.exercises}></learning-content>
 
                 </div>
